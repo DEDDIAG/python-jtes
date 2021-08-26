@@ -4,4 +4,4 @@ __all__ = [
     'jaccard_timespan_event_score'
 ]
 
-__version__ = '1.0.0'
+__version__ = '1.0.1'

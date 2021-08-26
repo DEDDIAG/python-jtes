@@ -48,7 +48,7 @@ def jaccard_timespan_event_score(y_true: np.ndarray, y_pred: np.ndarray) -> floa
     for i in range(1, len(y_true)):
         t00, t01 = y_true[i-1]
         t10, t11 = y_true[i]
-        if not (t01 < t10 or t00 > t11):
+        if not (t01 <= t10 or t00 >= t11):
             raise ValueError(f"Overlapping events in y_true are not allowed: {t00}-{t01} and {t10}-{t11}")
 
     # IoU
